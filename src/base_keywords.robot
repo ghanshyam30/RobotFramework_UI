@@ -15,6 +15,15 @@ Open Chrome With Media Permission
      Create Webdriver  Chrome  chrome_options=${options}
      Go To  ${go_to_url}
 
+Open New Browser Tab And Close Previous
+    [Documentation]  This keyword shall take new url to which it should route on newly opened tab and close the previous tab
+    [Arguments]     ${new_tab_url}
+    Execute Javascript          window.open()
+    sleep                       5
+    Close Window
+    Select Window               MAIN
+    Go To                       ${new_tab_url}
+
 Search Product And Get Price
     [Documentation]  Need To remove this keyword later on. This is just example as to how we can develop a keyword from tests by parametrizing it
     [Arguments]    ${product}
