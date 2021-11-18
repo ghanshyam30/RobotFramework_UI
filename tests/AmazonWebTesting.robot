@@ -3,10 +3,10 @@ Library    SeleniumLibrary
 Resource    ../src/base_keywords.robot
 *** Test Cases ***
 Search for the mi band 3 and get its price
-    Open Browser    http://www.amazon.in    Chrome
+    Open Browser    http://www.amazon.in    firefox    executable_path=/home/thebadcoder/TestWorkspace/RobotFramework_UI/drivers/geckodriver
     Maximize Browser Window
     Wait Until Page Contains Element    //input[@value='Go']
-    Input Text    //label[@id='nav-search-label']/following-sibling::input    Mi band 3
+    Input Text    //input[@id='twotabsearchtextbox']    Mi band 3
     Click Element    //input[@value='Go']
     Capture Page Screenshot
     Wait Until Page Contains Element    //*[text()='Mi Band 3 (Black)']

@@ -27,10 +27,10 @@ Open New Browser Tab And Close Previous
 Search Product And Get Price
     [Documentation]  Need To remove this keyword later on. This is just example as to how we can develop a keyword from tests by parametrizing it
     [Arguments]    ${product}
-    Open Browser    http://www.amazon.in    Chrome
+    Open Browser    http://www.amazon.in    firefox    executable_path=/home/thebadcoder/TestWorkspace/RobotFramework_UI/drivers/geckodriver
     Maximize Browser Window
     Wait Until Page Contains Element    //input[@value='Go']
-    Input Text    //label[@id='nav-search-label']/following-sibling::input    ${product}
+    Input Text    //input[@id='twotabsearchtextbox']    ${product}
     Click Element    //input[@value='Go']
     Capture Page Screenshot
     Wait Until Page Contains Element    //*[text()='${product}']
